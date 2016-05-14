@@ -1,1 +1,13 @@
 <p>Hey Xavier! Hi Arnaud! hello Bruno! Welcome to My DeMo DashBoard</p>
+
+<section ng-controller="dashBoardEmployeeCtrl">
+  <ul ng-repeat="Location in Locations"> 
+   	<li>
+   	<p>{{Location.name}}</p>
+    <p>{{Location.description}}</p>
+    <p>{{Location.latitude}}</p>
+    <p>{{Location.longitude}}</p>
+    </li>
+  </ul>
+</section>
+
