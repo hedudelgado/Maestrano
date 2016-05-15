@@ -3,7 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('dashBoardApp', [
   'ngRoute',
-  'dashBoardApp.employeeLocations'
+  'dashBoardApp.employeeLocations',
+  'ngMap'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/dashBoardView'});
