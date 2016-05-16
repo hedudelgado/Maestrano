@@ -1,5 +1,4 @@
-json.array!(@sales_location) do |sales_flow|
-  json.extract! sales_flow, :name, :sales
-  json.url sales_flow_url(sales_flow, format: :json)
+json.array!(@top_sales) do |top_sale|
+  json.extract! top_sale, :name, :sales
 end
 
