@@ -1,15 +1,9 @@
 <p>Hey Xavier! Hi Arnaud! hello Bruno! Welcome to My DeMo DashBoard</p>
 
-<section ng-controller="dashBoardEmployeeCtrl">
-	<map zoom-to-include-markers="true" style="display:block; width:auto; height:auto;">
-    	<marker ng-repeat="Location in Locations" position="{{Location.longitude}},{{Location.latitude}}" title="{{Location.name}}"></marker>
-	</map>
-   	
-    <p>{{Location.description}}</p>
-    <p>{{Location.latitude}}</p>
-    <p>{{Location.longitude}}</p>
-     </ul>
-</section>
-
-
-
+<body ng-controller="dashBoardEmployeeCtrl">
+	<map zoom = "1" >
+		<marker  ng-repeat="Location in Locations"
+		position="{{Location.latitude}},{{Location.longitude}}"
+    ></marker>
+   </map>
+ </body>

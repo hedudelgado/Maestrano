@@ -21,5 +21,4 @@ angular.module('dashBoardApp.employeeLocations', ['ngRoute'])
 		}
 	employeeLocationsService.employeeLocationsCall(callBack)
 	}
-
 ]);
