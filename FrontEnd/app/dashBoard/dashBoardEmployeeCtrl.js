@@ -9,7 +9,7 @@ angular.module('dashBoardApp.employeeLocations', ['ngRoute'])
   });
 }])
 
-.controller('dashBoardEmployeeCtrl', ["$scope", "$http", "employeeLocationsService", function($scope, $http, employeeLocationsService) {
+.controller('dashBoardEmployeeCtrl', ["$scope", "$http","NgMap", "employeeLocationsService", function($scope, $http, NgMap, employeeLocationsService) {
 	var callBack = function(data,status){
     	$scope.Locations = data;
 		}

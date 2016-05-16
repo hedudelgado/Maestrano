@@ -20,7 +20,7 @@ describe('dashBoardApp', function() {
 
     it('should render view1 when user navigates to /view1', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/Hey Xavier! Hi Arnaud! hello Bruno! Welcome to My DeMo DashBoard/);
+        toMatch(/Hey Xavier! Hi Arnaud! Hello Bruno! Welcome to My DeMo DashBoard/);
     });
   });
 });
