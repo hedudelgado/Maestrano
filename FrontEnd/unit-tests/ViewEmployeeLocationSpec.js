@@ -1,14 +1,14 @@
 describe('dashBoardEmployeeCtrl', function(){
-  var ctrl, scope, $httpBackend
+  var ctrl, scope, $httpBackend, NgMap
   var data = [{longitude: 1, latitude: 2, description: "cool office", name: "new your office"}]
 
   beforeEach(function(){
     module('dashBoardApp.employeeLocations');
-    inject(function($controller, $rootScope, _$httpBackend_, NgMap){
+    inject(function($controller, $rootScope, _$httpBackend_){
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('http://localhost:3000/employee_locations.json').respond(data)
       scope = $rootScope.$new();
-      ctrl = $controller('dashBoardEmployeeCtrl', {$scope:scope})
+      ctrl = $controller('dashBoardEmployeeCtrl', {$scope:scope, NgMap:NgMap})
     });
   });
 

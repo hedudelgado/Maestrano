@@ -4,7 +4,7 @@
 <div  ng-repeat="Location in Locations">
 		<p>{{Location.name}}:{{Location.description}}</p>
  </div>
-	<map zoom = "1" >
+	<map zoom = "2" >
 		<marker  ng-repeat="Location in Locations"
 		position="{{Location.latitude}},{{Location.longitude}}"
     ></marker>
