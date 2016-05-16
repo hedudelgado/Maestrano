@@ -12,5 +12,4 @@ class EmployeeLocationsController < ApplicationController
       render :json => "{\"code\": \"0001\" }", :status => :service_unavailable
     end 
   end
-
 end

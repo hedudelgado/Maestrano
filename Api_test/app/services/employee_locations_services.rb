@@ -1,5 +1,5 @@
-require 'location.rb'
-require_relative 'urls_http_requests.rb'
+require 		'location.rb'
+require_relative'urls_http_requests.rb'
 
 def call_employee_work_locations_api
 	auth = {:username=>ENV["USERNAME"], :password=>ENV["PASSWORD"]}
@@ -12,6 +12,7 @@ private
 def serialize_work_location(employee_locations)
   employee_locations= JSON.parse(employee_locations)
   @locations=[]
+
   employee_locations["work_locations"].each do |attributes|
   	location = Location.new(attributes["latitude"],attributes["longitude"],attributes["description"],attributes["name"])
    	@locations.push(location)
