@@ -4,7 +4,7 @@ describe('dashBoardEmployeeCtrl', function(){
 
   beforeEach(function(){
     module('dashBoardApp.employeeLocations');
-    inject(function($controller, $rootScope, _$httpBackend_){
+    inject(function($controller, $rootScope, _$httpBackend_, NgMap){
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('http://localhost:3000/employee_locations.json').respond(data)
       scope = $rootScope.$new();
