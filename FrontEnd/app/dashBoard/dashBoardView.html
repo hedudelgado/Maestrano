@@ -1,6 +1,9 @@
 <p>Hey Xavier! Hi Arnaud! hello Bruno! Welcome to My DeMo DashBoard</p>
 
 <body ng-controller="dashBoardEmployeeCtrl">
+<div  ng-repeat="Location in Locations">
+		<p>{{Location.name}}:{{Location.description}}</p>
+ </div>
 	<map zoom = "1" >
 		<marker  ng-repeat="Location in Locations"
 		position="{{Location.latitude}},{{Location.longitude}}"
