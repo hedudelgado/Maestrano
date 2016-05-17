@@ -8,9 +8,9 @@ class SalesFlowsController < ApplicationController
   # GET /sales_flows.json
   def index
     begin
-      call_sales_flow_api 
+      call_sales_flow_api
     rescue => ex
-     render :json => "{\"code\": \"0001\" }", :status => :service_unavailable
+     render :json => {"service unavailable": "0001" }, :status => :service_unavailable
     end
   end
 end

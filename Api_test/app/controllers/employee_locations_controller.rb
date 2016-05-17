@@ -9,7 +9,7 @@ class EmployeeLocationsController < ApplicationController
     begin
       call_employee_work_locations_api
     rescue => ex
-      render :json => "{\"code\": \"0001\" }", :status => :service_unavailable
+      render :json => {"service unavailable": "0001" }, :status => :service_unavailable
     end 
   end
 end
