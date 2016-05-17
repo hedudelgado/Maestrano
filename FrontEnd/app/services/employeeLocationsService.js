@@ -10,3 +10,4 @@ angular.module('dashBoardApp.employeeLocations')
 		}
 	}
 })
+  

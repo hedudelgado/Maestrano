@@ -1,4 +1,3 @@
-require "location.rb"
 
 describe Location do 
 	subject { described_class.new("latitude","longitude","description","name")}

@@ -1,6 +1,5 @@
-require "Top_sale.rb"
 
-describe Top_sale do 
+describe TopSale do 
 	subject { described_class.new('name','total_invoiced')}
 
 	it 'the class Top_sale has a name' do 

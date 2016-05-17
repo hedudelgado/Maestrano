@@ -1,4 +1,3 @@
-require "sale.rb"
 
 describe Sale do 
 	subject { described_class.new('name','country','city','total_invoiced')}
