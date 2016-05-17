@@ -4,7 +4,7 @@ angular.module('dashBoardApp.SalesLocations')
 	return {
 		
 		SalesFlowCall: function(callBack) {
-			$http.get('http://localhost:3000//sales_flows.json').success(function(data,status){
+			$http.get('http://localhost:3000/sales_flows.json').success(function(data,status){
     	callBack(data,status)
   		});		
 		}
