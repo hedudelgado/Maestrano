@@ -5,6 +5,7 @@ angular.module('dashBoardApp', [
   'ngRoute',
   'ngMap',
   'dashBoardApp.employeeLocations',
+  'dashBoardApp.SalesLocations',
   
 ]).
 config(['$routeProvider', function($routeProvider) {
