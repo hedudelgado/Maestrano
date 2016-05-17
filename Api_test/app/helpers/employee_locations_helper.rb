@@ -1,2 +1,0 @@
-module EmployeeLocationsHelper
-end
