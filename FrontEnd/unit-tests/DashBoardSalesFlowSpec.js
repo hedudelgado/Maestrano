@@ -12,9 +12,9 @@ describe('dashBoardSalesFlowCtrl', function(){
     });
   });
 
-  it('has a attribute called $scope.employeeLocations that returns an object from api', function(){
+  it('has a attribute called $scope.sales that returns an object from api', function(){
     $httpBackend.flush()
-    expect(scope.Locations).toEqual([{name: "new your office"}])
+    expect(scope.sales).toEqual([{name: "new your office"}])
   })
 
 });
