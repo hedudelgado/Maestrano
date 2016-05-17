@@ -1,3 +1,4 @@
+require 		'location.rb'
 require_relative'urls_http_requests.rb'
 require 'top_employee_locations_selector.rb'
 

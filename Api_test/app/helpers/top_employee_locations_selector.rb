@@ -1,4 +1,3 @@
-require 'location.rb'
 
 def employee_locations_selector(locations)
 	city = locations.each_with_object(Hash.new(0)) { |locations, counts| counts[locations.name] += 1 }.max_by{|k,v| v}

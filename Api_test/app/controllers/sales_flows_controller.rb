@@ -1,4 +1,3 @@
-require 'sale.rb'
 require 'sales_flow_service.rb'
 
 class SalesFlowsController < ApplicationController

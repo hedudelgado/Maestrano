@@ -1,4 +1,3 @@
-require 'top_sale.rb'
 
 def top_sales_location_selector(locations)
 	city 	= locations.each_with_object(Hash.new(0)) { |locations, counts| counts[locations.city] += 1 }.max_by{|k,v| v}

@@ -1,5 +1,6 @@
 require 'urls_http_requests.rb'
 require 'top_sales_location_selector.rb'
+require 'sale.rb'
 
 def call_sales_flow_api
 	auth = {:username=>ENV["USERNAME"], :password=>ENV["PASSWORD"]}
