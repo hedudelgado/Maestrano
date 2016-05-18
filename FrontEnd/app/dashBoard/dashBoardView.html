@@ -2,7 +2,8 @@
 
 <div ng-controller="dashBoardEmployeeCtrl">
 	<div  ng-repeat="Location in Locations">
-		<p>{{Location.name}}:{{Location.description}}</p>
+		<p>Place: {{Location.name}}</p>
+    <p>Decription:{{Location.description}}</p>
  	</div>
 	<map zoom = "2" >
 	<marker  ng-repeat="Location in Locations"
@@ -14,7 +15,8 @@
 
 <div ng-controller="dashBoardSalesFlowCtrl">
 	<div ng-repeat="Sale in sales">
-		<p>{{Sale.name}}:{{Sale.sales}}  </p>
+		<p>Place: {{Sale.name}} </p>
+    <p>Total Sales:{{Sale.sales}}  </p>
 	</div>
 	<map zoom = "2" >
 		<marker  ng-repeat="Sale in sales" position="{{Sale.name}}"></marker>
