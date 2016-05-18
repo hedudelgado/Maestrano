@@ -4,7 +4,7 @@ angular.module('dashBoardApp.employeeLocations')
 	return {
 
 		employeeLocationsCall: function(callBack) {
-			$http.get('http://localhost:3000/employee_locations.json').success(function(data,status){
+			$http.get(url + 'employee_locations.json').success(function(data,status){
     	callBack(data,status)
   		});		
 		}

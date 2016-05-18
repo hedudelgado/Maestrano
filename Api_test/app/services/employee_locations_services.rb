@@ -9,11 +9,11 @@ end
 
 def serialize_work_location(employee_locations)
   employee_locations= JSON.parse(employee_locations)
-  @locations=[]
+  locations=[]
 
   employee_locations["work_locations"].each do |attributes|
   	location = Location.new(attributes["latitude"],attributes["longitude"],attributes["description"],attributes["name"])
-   	@locations.push(location)
+   	locations.push(location)
  	end
- 	employee_locations_selector(@locations)
+ 	employee_locations_selector(locations)
 end	
