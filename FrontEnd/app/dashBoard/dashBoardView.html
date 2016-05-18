@@ -1,25 +1,27 @@
-<p>Hey Xavier! Hi Arnaud! Hello Bruno! Welcome to My DeMo DashBoard</p>
+<h1>Hey Xavier! Arnaud! Bruno! Welcome to My DeMo DashBoard</h1>
 
+<h2> Employees location</h2>
 <div ng-controller="dashBoardEmployeeCtrl">
 	<div  ng-repeat="Location in Locations">
-		<p>Place: {{Location.name}}</p>
-    <p>Decription:{{Location.description}}</p>
+		<h3 ><p>Place: {{Location.name}}</p>
+    <p>Decription:{{Location.description}}</p></h3>
  	</div>
 	<map zoom = "2" >
-	<marker  ng-repeat="Location in Locations"
+	<marker  ng-repeat="Location in Locations"  animation="DROP"
 		position="{{Location.latitude}},{{Location.longitude}}"
    ></marker>
   </map>
  </body>
 </div>
 
+<h2>Sales flow</h2>
 <div ng-controller="dashBoardSalesFlowCtrl">
 	<div ng-repeat="Sale in sales">
-		<p>Place: {{Sale.name}} </p>
-    <p>Total Sales:{{Sale.sales}}  </p>
+		<p><h3>Place: {{Sale.name}} </p>
+    <p>Total Sales:{{Sale.sales}}  </p></h3>
 	</div>
-	<map zoom = "2" >
-		<marker  ng-repeat="Sale in sales" position="{{Sale.name}}"></marker>
+	<map zoom = "2" height="20">
+		<marker  ng-repeat="Sale in sales"  animation="DROP" position="{{Sale.name}}"></marker>
   </map>
  </div>
 </div>
