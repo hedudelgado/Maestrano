@@ -1,12 +1,14 @@
-require 'top_sale.rb'
+require 'topsale.rb'
 
 def top_sales_location_selector(locations)
+	p 'cccccccccccc'
 	city 	= locations.each_with_object(Hash.new(0)) { |locations, counts| counts[locations.city] += 1 }.max_by{|k,v| v}
 	country = locations.each_with_object(Hash.new(0)) { |locations, counts| counts[locations.country] += 1 }.max_by{|k,v| v}
  	sales_amount_calculation(locations,country,city)
 end
 
 def sales_amount_calculation(locations,country,city)
+	p 'ddddddddddddd'
 	top_city_invoiced	 = 0
 	top_country_invoiced = 0
 	locations.each do |location|

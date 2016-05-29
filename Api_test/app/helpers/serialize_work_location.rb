@@ -1,8 +1,7 @@
 require 'top_employee_locations_selector.rb'
-include EmployeeLocation
 
-module SerializeWorkLocation
 	def serialize_work_location(employee_locations)
+		p '33333333333333'
 	  employee_locations= JSON.parse(employee_locations)
 	  locations=[]
 
@@ -10,9 +9,8 @@ module SerializeWorkLocation
 	  	location = Location.new(attributes["latitude"],attributes["longitude"],attributes["description"],attributes["name"])
 	   	locations.push(location)
 	 	end
-	employee_locations_selector(locations)
+		employee_locations_selector(locations)
 	end	
-end
 
 
 
