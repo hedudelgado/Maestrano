@@ -1,7 +1,6 @@
 class WorkLocationSerializer
 
 	def serialize_sales_flow_location(sales_flow)
-	  p 'bbbbbbbbb'
 	  sales_location = []
 	 	
 	 	sales_flow["content"]["customers"].each do |sales|

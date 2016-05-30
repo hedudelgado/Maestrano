@@ -12,8 +12,6 @@ class ApiCalls
 
 	def call_sales_flow_api
 	  sales_flow = HTTParty.get(Settings.url_sales_flow, :basic_auth => @auth)    
-	  p 'aaaaaaaaaaaaa'
-	  p sales_flow
 	  workserializer = WorkLocationSerializer.new
 	  workserializer.serialize_sales_flow_location(sales_flow) 
 	end
