@@ -1,3 +1,4 @@
+require 'rails_helper.rb'
 
 describe Location do 
 	subject { described_class.new("latitude","longitude","description","name")}

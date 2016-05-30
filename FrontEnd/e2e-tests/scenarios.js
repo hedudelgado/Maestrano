@@ -19,8 +19,8 @@ describe('dashBoardApp', function() {
 
 
     it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/Hey Xavier! Arnaud! Bruno! Welcome to My DeMo DashBoard/);
+      expect(element.all(by.css('h1')).first().getText()).
+        toMatch(/HEY XAVIER! ARNAUD! BRUNO! WELCOME TO MY DEMO DASHBOARD/);
     });
   });
 });

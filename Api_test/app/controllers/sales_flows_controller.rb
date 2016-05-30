@@ -6,7 +6,7 @@ class SalesFlowsController < ApplicationController
   def index
     begin
       apiCall = ApiCalls.new
-      apiCall.call_sales_flow_api
+      @top_sales = apiCall.call_sales_flow_api
     rescue => ex
      render :json => {"service unavailable": "0001" }, :status => :service_unavailable
     end
