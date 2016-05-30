@@ -6,7 +6,7 @@ class Location
 		@latitude 		= latitude
 		@longitude 		= longitude
 		@description	= description
-		@name			= name
+		@name					= name
 	end
 
 end
