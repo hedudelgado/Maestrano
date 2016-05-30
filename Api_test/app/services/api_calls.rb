@@ -9,7 +9,7 @@ class ApiCalls
 
 	def call_sales_flow_api
 		auth = {:username=>ENV["USERNAME"], :password=>ENV["PASSWORD"]}
-	  sales_flow = 'a'#HTTParty.get(Settings.url_sales_flow, :basic_auth => auth)    
+	  sales_flow = HTTParty.get(Settings.url_sales_flow, :basic_auth => auth)    
 	  p 'aaaaaaaaaaaaa'
 	  p sales_flow
 	  workserializer = WorkLocationSerializer.new
