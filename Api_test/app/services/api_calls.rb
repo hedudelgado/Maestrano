@@ -6,7 +6,7 @@ class ApiCalls
 
 	def call_employee_work_locations_api
 	  employee_locations = HTTParty.get(Settings.employee_work_Location_url , :basic_auth => @auth)
-	  serializer = EmployeeSerializer.new
+	  serializer = EmployeeLocationSerializer.new
 	  serializer.serialize_work_location(employee_locations)
 	end	
 

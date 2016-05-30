@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-describe Location do 
+describe EmployeeLocation do 
 	subject { described_class.new("latitude","longitude","description","name")}
 
 	it 'the class location has a name' do 
