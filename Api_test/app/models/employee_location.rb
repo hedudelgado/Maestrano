@@ -1,4 +1,4 @@
-class Location
+class EmployeeLocation
 
 	attr_reader :name, :description, :longitude, :latitude
 	
