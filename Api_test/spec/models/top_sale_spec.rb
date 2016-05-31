@@ -1,5 +1,5 @@
 
-describe TopSale do 
+describe TopSaleLocation do 
 	subject { described_class.new('name','total_invoiced')}
 
 	it 'the class Top_sale has a name' do 

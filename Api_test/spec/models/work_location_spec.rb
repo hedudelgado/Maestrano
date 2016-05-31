@@ -1,5 +1,5 @@
 
-describe Sale do 
+describe SaleLocation do 
 	subject { described_class.new('name','country','city','total_invoiced')}
 
 	it 'the class Sale has a name' do 

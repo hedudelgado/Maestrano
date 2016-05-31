@@ -1,11 +1,10 @@
-class WorkLocationSerializer
+class SaleLocationSerializer
 
 	def serialize_sales_flow_location(sales_flow)
 	  sales_location = []
 	 	
 	 	sales_flow["content"]["customers"].each do |sales|
-	 		p sales
-	    sales_location.push(Sale.new(sales["name"],sales["country"],sales["city"],sales["total_invoiced"]))
+	    sales_location.push(SaleLocation.new(sales["name"],sales["country"],sales["city"],sales["total_invoiced"]))
 	  end
 	top_sales_location_selector(sales_location)
 	end
@@ -29,8 +28,8 @@ class WorkLocationSerializer
 	end
 
 	def top_sales_builder(city,top_city_invoiced,country,top_country_invoiced )
-		top_city 	  = TopSale.new(city[0],top_city_invoiced)
-	 	top_country = TopSale.new(country[0],top_country_invoiced)
+		top_city 	  = TopSaleLocation.new(city[0],top_city_invoiced)
+	 	top_country = TopSaleLocation.new(country[0],top_country_invoiced)
 	 	@top_sales  =[top_city,top_country]
 	end
 end

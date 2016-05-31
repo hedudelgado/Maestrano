@@ -1,4 +1,4 @@
-class TopSale
+class TopSaleLocation
 	
 	attr_reader :sales, :name
 

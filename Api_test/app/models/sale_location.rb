@@ -1,4 +1,4 @@
-class Sale
+class SaleLocation
 
 	attr_reader :sales, :name, :country, :city
 	
