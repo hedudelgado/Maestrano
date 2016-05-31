@@ -6,7 +6,11 @@ angular.module('dashBoardApp.SalesLocations', ['ngRoute'])
   $routeProvider.when('/dashBoardView', {
     templateUrl: 'dashBoard/dashBoardView.html',
     controller: 'dashBoardSalesFlowCtrl'
-  });
+  })
+  .when('/sign_in', {
+        templateUrl: 'dashBoard/new.html',
+        controller: 'UserSessionsCtrl'
+   });
 }])
 
 .controller('dashBoardSalesFlowCtrl', ["$scope", "$http","NgMap", "dashBoardSalesFlowService", function($scope, $http, NgMap, dashBoardSalesFlowService) {
@@ -16,4 +20,6 @@ angular.module('dashBoardApp.SalesLocations', ['ngRoute'])
 		}
 	dashBoardSalesFlowService.SalesFlowCall(callBack)
 	}
-]);
+])
+.controller('UserSessionsCtrl', ['$scope', function ($scope) {
+  }]);

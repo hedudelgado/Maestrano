@@ -6,7 +6,7 @@ angular.module('dashBoardApp', [
   'ngMap',
   'dashBoardApp.employeeLocations',
   'dashBoardApp.SalesLocations',
-  
+  'ng-token-auth',
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/dashBoardView'});
