@@ -7,8 +7,15 @@ angular.module('dashBoardApp', [
   'dashBoardApp.employeeLocations',
   'dashBoardApp.SalesLocations',
   'ng-token-auth',
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+
+.run(['$rootScope', '$location', function($rootScope, $location) {
+  $rootScope.$on('auth:login-success', function() {
+    $location.path('/dashBoardView');
+  });
+}])
+
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/sign_in'});
 }])
 
