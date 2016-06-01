@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <li ng-show="!user.id"><a ng-href='/app/#/sign_in'>Sign in</a></li> 
-<li ng-show="user.id"><a ng-click='signOut()'>Sign out</a></li>
+<li ng-show="user.id"><a ng-click='signOut()' onclick="location.href = '/app/#/sign_in';">Sign out</a></li>
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
