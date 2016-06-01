@@ -9,5 +9,12 @@ angular.module('dashBoardApp', [
   'ng-token-auth',
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/dashBoardView'});
-}]);
+  $routeProvider.otherwise({redirectTo: '/sign_in'});
+}])
+
+.config(function($authProvider) {
+        $authProvider.configure({
+            apiUrl: url
+        });
+    });
+;
