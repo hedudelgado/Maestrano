@@ -14,7 +14,7 @@ config(['$routeProvider', function($routeProvider) {
 
 .config(function($authProvider) {
         $authProvider.configure({
-            apiUrl: url
+            apiUrl: url+'api'
         });
     });
 ;
