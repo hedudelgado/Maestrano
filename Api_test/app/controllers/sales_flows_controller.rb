@@ -1,4 +1,5 @@
 class SalesFlowsController < ApplicationController
+  before_filter :authenticate_user!
 
   # GET /sales_flows
   # GET /sales_flows.json
