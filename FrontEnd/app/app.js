@@ -6,8 +6,22 @@ angular.module('dashBoardApp', [
   'ngMap',
   'dashBoardApp.employeeLocations',
   'dashBoardApp.SalesLocations',
-  
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/dashBoardView'});
-}]);
+  'ng-token-auth',
+])
+
+.run(['$rootScope', '$location', function($rootScope, $location) {
+  $rootScope.$on('auth:login-success', function() {
+    $location.path('/dashBoardView');
+  });
+}])
+
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.otherwise({redirectTo: '/sign_in'});
+}])
+
+.config(function($authProvider) {
+        $authProvider.configure({
+            apiUrl: url+'api'
+        });
+    });
+;

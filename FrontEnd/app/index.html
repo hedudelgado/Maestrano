@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<li ng-show="!user.id"><a ng-href='/app/#/sign_in'>Sign in</a></li> 
+<li ng-show="user.id"><a ng-click='signOut()' onclick="location.href = '/app/#/sign_in';">Sign out</a></li>
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
@@ -22,7 +24,7 @@
 
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -35,8 +37,9 @@
   <script src="dashBoard/dashBoardEmployeeCtrl.js"></script>
   <script src="dashBoard/dashBoardSalesFlowCtrl.js"></script>
   <script src="components/version/version.js"></script>
-    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script> 
-
+  <script src="bower_components/angular-cookie/angular-cookie.min.js"></script>
+  <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script> 
+  <script src="bower_components/ng-token-auth/dist/ng-token-auth.min.js"></script>
   <script src="services/dashBoardSalesFlowService.js"></script> 
   <script src="services/employeeLocationsService.js"></script>
   <script src="http://maps.google.com/maps/api/js"></script>

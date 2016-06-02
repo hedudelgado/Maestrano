@@ -1,5 +1,4 @@
 class SalesFlowsController < ApplicationController
-  before_action :set_sales_flow, only: [:show, :edit, :update, :destroy]
 
   # GET /sales_flows
   # GET /sales_flows.json
