@@ -8,6 +8,13 @@ class ApplicationController < ActionController::Base
   before_filter :cors_preflight_check
   after_filter :cors_set_access_control_headers
 
+  protect_from_forgery with: :null_session
+
+  before_action :destroy_session
+
+  def destroy_session
+    request.session_options[:skip] = true
+  end
 
   def cors_set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'

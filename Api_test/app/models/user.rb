@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules.
-
+	include DeviseTokenAuth::Concerns::User
+  
   before_save -> do
     self.uid = SecureRandom.uuid
     skip_confirmation!
@@ -9,5 +10,5 @@ class User < ActiveRecord::Base
    devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :trackable, :validatable,
           :confirmable, :omniauthable
-  include DeviseTokenAuth::Concerns::User
+  
 end
