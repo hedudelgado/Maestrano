@@ -1,16 +1,15 @@
 class ApplicationController < ActionController::Base
   include DeviseTokenAuth::Concerns::SetUserByToken
   include ActionController::MimeResponds
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   before_filter :add_allow_credentials_headers
   skip_before_filter :verify_authenticity_token
   before_filter :cors_preflight_check
   after_filter :cors_set_access_control_headers
+  protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
 
-  protect_from_forgery with: :null_session
-
-  before_action :destroy_session
 
   def destroy_session
     request.session_options[:skip] = true

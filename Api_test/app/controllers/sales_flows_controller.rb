@@ -1,11 +1,5 @@
 class SalesFlowsController < ApplicationController
-    #before_filter :authenticate_user!, except: [:new, :create]
-  #before_filter :authenticate_user!, except: [:new, :create]
- #before_filter :login_required, :only => [:method1,:method2]
-#before_filter :authenticate_user! 
- before_action :authenticate_user!
-#  before_action :set_sales_flow, only: [:show, :edit, :update, :destroy]
-#before_filter :login_required, :only => [:method1,:method2]
+
   # GET /sales_flows
   # GET /sales_flows.json
   def index

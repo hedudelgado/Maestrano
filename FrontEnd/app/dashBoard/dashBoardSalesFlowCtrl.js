@@ -30,4 +30,4 @@ angular.module('dashBoardApp.SalesLocations', ['ngRoute'])
   $scope.$on('auth:login-error', function(ev, reason) {
       $scope.error = reason.errors[0];
     });
-  }]);
+}]);
