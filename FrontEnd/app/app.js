@@ -22,7 +22,7 @@ angular.module('dashBoardApp', [
 
 .config(function($authProvider) {
   $authProvider.configure({
-    apiUrl: url+'api'
+    apiUrl: url
   });
 });
 
