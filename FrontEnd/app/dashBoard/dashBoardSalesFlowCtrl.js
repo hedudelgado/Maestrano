@@ -7,27 +7,17 @@ angular.module('dashBoardApp.SalesLocations', ['ngRoute'])
     templateUrl: 'dashBoard/dashBoardView.html',
     controller: 'dashBoardSalesFlowCtrl',
     resolve: {
-    auth: ['$auth', function($auth) {
-      return $auth.validateUser();
-    }]
-  }
-})
-  .when('/sign_in', {
-        templateUrl: 'dashBoard/new.html',
-        controller: 'UserSessionsCtrl'
-   });
+      auth: ['$auth', function($auth) {
+        return $auth.validateUser();
+      }]
+    }
+  })
 }])
 
 .controller('dashBoardSalesFlowCtrl', ["$scope", "$http","NgMap", "dashBoardSalesFlowService", function($scope, $http, NgMap, dashBoardSalesFlowService) {
-	
 	var callBack = function(data,status){
     	$scope.sales = data;
 		}
-	dashBoardSalesFlowService.SalesFlowCall(callBack)
-	}
-])
-.controller('UserSessionsCtrl', ['$scope', function ($scope) {
-  $scope.$on('auth:login-error', function(ev, reason) {
-      $scope.error = reason.errors[0];
-    });
-}]);
+  dashBoardSalesFlowService.SalesFlowCall(callBack)
+  }
+]);

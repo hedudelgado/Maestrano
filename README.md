@@ -9,12 +9,14 @@
 
 Technology Used
 ---------------
-Ruby on Rails Back End
-AngularJS Front End
 
-Protractor
-Karma
-Rspec
+Back End:  Ruby on Rails     
+Front End: AngularJS     
+
+Testing:
+Protractor   
+Karma   
+Rspec   
 
 Installation Instructions
 -------------------------
@@ -22,6 +24,8 @@ Installation Instructions
 git clone https://github.com/hedudelgado/Maestrano
 $cd Api_test
 $bundle install
+$rake db:create
+$rake db:migrate
 ```
 
 Run the servers
@@ -29,11 +33,11 @@ Run the servers
 
 ```
 Back End (within backend directory) ->rails s
-Go to http://localhost:3000 (or any other path the Api uses) in your browser, to make sure the server is running.
+Go to http://localhost:3000 (or any other path the Api uses) in your browser, to make sure the server is running and up.
 ```
 ```
 Front end (within front end directory)-> npm start
-Go to http://localhost:8000 (or any other path the Angular uses) in your browser, to make sure the server is running.
+Go to http://localhost:8000 (or any other path the Angular uses) in your browser, to make sure the server is running and up.
 ```
 
 
