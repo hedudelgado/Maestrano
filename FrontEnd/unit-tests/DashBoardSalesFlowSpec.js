@@ -6,7 +6,7 @@ describe('dashBoardSalesFlowCtrl', function(){
     module('dashBoardApp.SalesLocations');
     inject(function($controller, $rootScope, _$httpBackend_){
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('http://localhost:3000/sales_flows.json').respond(data)
+      $httpBackend.expectGET(url + 'sales_flows.json').respond(data)
       scope = $rootScope.$new();
       ctrl = $controller('dashBoardSalesFlowCtrl', {$scope:scope, NgMap:NgMap})
     });
