@@ -6,6 +6,7 @@ angular.module('dashBoardApp', [
   'ngMap',
   'dashBoardApp.employeeLocations',
   'dashBoardApp.SalesLocations',
+  'dashBoardApp.UserSessions',
   'ng-token-auth',
 ])
 
@@ -20,8 +21,8 @@ angular.module('dashBoardApp', [
 }])
 
 .config(function($authProvider) {
-        $authProvider.configure({
-            apiUrl: url+'api'
-        });
-    });
-;
+  $authProvider.configure({
+    apiUrl: url+'api'
+  });
+});
+

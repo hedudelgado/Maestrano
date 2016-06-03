@@ -7,15 +7,11 @@ angular.module('dashBoardApp.employeeLocations', ['ngRoute'])
     templateUrl: 'dashBoard/dashBoardView.html',
     controller: 'dashBoardEmployeeCtrl',
     resolve: {
-    auth: ['$auth', function($auth) {
-      return $auth.validateUser();
-    }]
-  }
-})
-  .when('/sign_in', {
-        templateUrl: 'dashBoard/new.html',
-        controller: 'UserSessionsCtrl'
-   });
+      auth: ['$auth', function($auth) {
+        return $auth.validateUser();
+      }]
+    }
+  })
 }])
 
 .controller('dashBoardEmployeeCtrl', ["$scope", "$http","NgMap", "employeeLocationsService", function($scope, $http, NgMap, employeeLocationsService) {
