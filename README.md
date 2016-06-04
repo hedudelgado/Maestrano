@@ -13,7 +13,7 @@ Technology Used
 Back End:  Ruby on Rails     
 Front End: AngularJS     
 
-Testing:
+Testing:    
 Protractor   
 Karma   
 Rspec   
@@ -32,7 +32,7 @@ Run the servers
 ---------------
 
 ```
-Back End (within backend directory) ->rails s
+Back End (within backend(Api_test) directory) ->rails s
 Go to http://localhost:3000 (or any other path the Api uses) in your browser, to make sure the server is running and up.
 ```
 ```

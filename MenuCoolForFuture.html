@@ -1,0 +1,40 @@
+
+<div class="login">
+<header class="header">
+    <span class="text">Impact!</span>
+    <span class="loader"></span>
+  </header>
+
+<form class="form"> 
+<form ng-submit="submitLogin(loginForm)" role="form" ng-init="loginForm = {}">
+  <input class="input"
+          for="email"
+          type="text"
+          name="email"
+          placeholder="Email"
+          id="email"
+          ng-model="loginForm.email"
+          required="required"
+          >
+
+
+  <input  class="input"
+          for="password"
+          type="password"
+          name="password"
+          placeholder="Password"
+          id="password"
+          ng-model="loginForm.password"
+          required="required"
+          >
+            <button type="submit" >Sign in</button>
+  </div>
+  </form>
+
+
+  <div class="alert alert-danger" role="alert" ng-show="error">
+  {{error}}
+  </form>
+</div>
+
+</body>

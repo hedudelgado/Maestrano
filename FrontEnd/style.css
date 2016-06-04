@@ -1,5 +1,4 @@
-/* app css stylesheet */
-
+/*
 * {
   margin: 0;
   padding: 0;
@@ -16,20 +15,6 @@ body {
 }
 
 .login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -10rem 0 0 -10rem;
-  width: 20rem;
-  height: 20rem;
-  padding: 3em;
-  background: hsla(255,255%,255%,1);
-  border-radius: 50%;
-  overflow: hidden;
-  -webkit-transition: all 1s ease;
-  transition:all 1s ease;
-}
-.login1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -183,7 +168,7 @@ body {
   height: 4rem;
   border: none;
   background: hsla(255, 255%, 255%, 1);
-  font-size: 0;
+  font-size: 0.1;
   border: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -226,42 +211,4 @@ body {
   background:hsla(255,255%,255%,1);
   color:hsla(0,0%,0%,1);
   outline:5px solid hsla(0,0%,0%,1);
-}
-h1 {
-  font-size: 40px;
-  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-  color: #00000;
-  padding: 3;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-}
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
+}*/
