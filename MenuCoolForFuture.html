@@ -14,10 +14,8 @@
           placeholder="Email"
           id="email"
           ng-model="loginForm.email"
-          required="required"
-          >
-
-
+          required="required">
+    
     <input  class="input"
           for="password"
           type="password"
@@ -25,15 +23,14 @@
           placeholder="Password"
           id="password"
           ng-model="loginForm.password"
-          required="required"
-          >
-    <button type="submit" >Sign in</button>
+          required="required">
 
+    <button type="submit" >SignIn</button>
   </form>
-
 
   <div class="alert alert-danger" role="alert" ng-show="error">
   {{error}}
+  
 </form>
 </div>
 
