@@ -30,8 +30,8 @@ describe('dashBoardApp', function() {
       element(by.buttonText("Sign in")).click().then(function() {
         browser.waitForAngular();
       })
-      expect(element.all(by.css('h1')).first().getText()).
-        toMatch(/HEY XAVIER! ARNAUD! BRUNO! WELCOME TO MY DEMO DASHBOARD/);
+      expect(element.all(by.css('h2')).first().getText()).
+        toMatch(/Hey Xavier! Arnaud! Bruno! Welcome to My DeMo DashBoard/);
     });
   });
 });
